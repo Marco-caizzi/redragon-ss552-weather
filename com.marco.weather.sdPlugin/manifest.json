@@ -1,0 +1,58 @@
+{
+  "Actions": [
+    {
+      "UUID": "com.marco.weather.key",
+      "Icon": "images/action.png",
+      "States": [
+        {
+          "Image": "images/key.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ],
+      "Name": "Clima (tecla)",
+      "Tooltip": "Clima actual, próximas horas y próximos días. Pulsá para cambiar de vista.",
+      "UserTitleEnabled": false,
+      "SupportedInMultiActions": false,
+      "Controllers": ["Keypad"],
+      "PropertyInspectorPath": "pi.html"
+    },
+    {
+      "UUID": "com.marco.weather.knob",
+      "Icon": "images/action.png",
+      "States": [
+        {
+          "Image": "images/knob.png",
+          "Title": "",
+          "ShowTitle": false
+        }
+      ],
+      "Name": "Clima (perilla)",
+      "Tooltip": "Girá para recorrer el pronóstico por hora; pulsá para cambiar entre ahora, horas y días.",
+      "UserTitleEnabled": false,
+      "SupportedInMultiActions": false,
+      "Controllers": ["Knob"],
+      "PropertyInspectorPath": "pi.html"
+    }
+  ],
+  "Version": "1.0.1",
+  "Name": "Clima Open-Meteo",
+  "Icon": "images/plugin.png",
+  "CategoryIcon": "images/category.png",
+  "Category": "Clima Open-Meteo",
+  "Description": "Weather from Open-Meteo by exact coordinates: current conditions, hourly and daily forecast on keys and knobs.",
+  "CodePath": "weather.exe",
+  "CodePathWin": "weather.exe",
+  "SDKVersion": 1,
+  "Author": "Marco",
+  "URL": "https://github.com/Marco-caizzi/redragon-ss552-weather",
+  "OS": [
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Software": {
+    "MinimumVersion": "2.10.179.426"
+  }
+}

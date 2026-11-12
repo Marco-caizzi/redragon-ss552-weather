@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Clima - configuración</title>
+  <style>
+    body {
+      font-family: Segoe UI, Arial, sans-serif;
+      background: #111827;
+      color: #ffffff;
+      padding: 12px;
+      font-size: 12px;
+    }
+    label { display: block; margin-top: 12px; }
+    input, select {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 4px;
+      padding: 6px 8px;
+      border: 1px solid #374151;
+      border-radius: 6px;
+      background: #1f2937;
+      color: #ffffff;
+      font-size: 12px;
+    }
+    .row { display: flex; gap: 6px; margin-top: 4px; }
+    .row input { margin-top: 0; }
+    button {
+      padding: 6px 10px;
+      border: 1px solid #374151;
+      border-radius: 6px;
+      background: #374151;
+      color: #ffffff;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    #results { margin-top: 6px; }
+    #results button {
+      display: block;
+      width: 100%;
+      margin-top: 4px;
+      text-align: left;
+      background: #1f2937;
+    }
+    #results button:hover { background: #374151; }
+    .current { margin-top: 6px; color: #22c55e; }
+    .status { margin-top: 6px; color: #fbbf24; }
+    .hint { margin-top: 14px; color: #9ca3af; line-height: 1.4; }
+  </style>
+</head>
+<body>
+  <label for="query">Ciudad</label>
+  <div class="row">
+    <input id="query" type="text" placeholder="Ej.: Córdoba" autocomplete="off" />
+    <button id="search" type="button">Buscar</button>
+  </div>
+  <div id="current" class="current"></div>
+  <div id="status" class="status"></div>
+  <div id="results"></div>
+
+  <label>
+    Unidades
+    <select id="units">
+      <option value="c">Celsius (°C)</option>
+      <option value="f">Fahrenheit (°F)</option>
+    </select>
+  </label>
+
+  <label>
+    Actualizar cada
+    <select id="refresh">
+      <option value="10">10 minutos</option>
+      <option value="15">15 minutos</option>
+      <option value="30">30 minutos</option>
+      <option value="60">1 hora</option>
+    </select>
+  </label>
+
+  <div class="hint">
+    Datos de <b>Open-Meteo</b> por coordenadas exactas.<br />
+    Tecla: pulsá para ver ahora → próximas horas → próximos días.<br />
+    Perilla: girá para recorrer las horas, pulsá para cambiar de vista.
+  </div>
+
+  <script src="pi.js"></script>
+</body>
+</html>

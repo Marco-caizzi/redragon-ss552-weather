@@ -1,0 +1,4 @@
+build/
+*.zip
+com.marco.weather.sdPlugin/weather.exe
+com.marco.weather.sdPlugin/*.log
